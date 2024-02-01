@@ -24,3 +24,11 @@ dag = DAG(
     description='Our first DAG with ETL process!',
     schedule_interval=timedelta(days=1),
 )
+
+run_etl = PythonOperator(
+    task_id='complete_twitter_etl',
+    python_callable=run_twitter_etl,
+    dag=dag, 
+)
+
+run_etl
