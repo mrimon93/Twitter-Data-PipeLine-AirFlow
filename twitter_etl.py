@@ -9,9 +9,6 @@ import s3fs
 # consumer_key = ""
 # consumer_secret = ""
 
-
-
-
    # Twitter authentication
 auth = tweepy.OAuthHandler(access_key, access_secret)   
 auth.set_access_token(consumer_key, consumer_secret) 
