@@ -10,6 +10,8 @@ import s3fs
 # consumer_secret = ""
 
 
+
+
    # Twitter authentication
 auth = tweepy.OAuthHandler(access_key, access_secret)   
 auth.set_access_token(consumer_key, consumer_secret) 
@@ -37,3 +39,5 @@ for tweet in tweets:
         
         list.append(refined_tweet)
 
+df = pd.DataFrame(list)
+df.to_csv('refined_tweets.csv')
